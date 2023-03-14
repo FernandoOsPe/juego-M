@@ -24,6 +24,7 @@ function ataqueTierra() {
     ataqueEnemigo()
 }
 
+
 function ataqueEnemigo() {
     let ataqueAleatorrio = aleatorio(1,3)
 
@@ -33,34 +34,28 @@ function ataqueEnemigo() {
         ataquePC = "FUEGO"
     } else {
         ataquePC = "TIERRA"
-    }   
-     
-    
-
+    }  
     crearMensaje()
 }
 
 function combate() {
     if(pc == jugador){
-        alert("EMPATE")
+        crearMensaje("EMPATE")
     } else if(ataqueJugador == "AIRE" && ataqueEnemigo == "TIERRA"){ 
-        alert("GANASTE")
+        crearMensaje("GANASTE")
     } else if(ataqueJugador == "FUEGO" && ataqueEnemigo == "AIRE"){
-        alert("GANASTE")
+        crearMensaje("GANASTE")
     } else if(ataqueJugador == "TIERRA" && ataqueEnemigo == "FUEGO"){
-        alert("GANASTE")
+        crearMensaje("GANASTE")
     } else {
-        alert("PERDISTE") 
+        crearMensaje("PERDISTE") 
     }
 }
 
-function crearMensaje() {
+function crearMensaje(resultado) {
     let seleccionarMensaje = document.getElementById("mensaje")
-
-
     let parrafo = document.createElement("p")
-    parrafo.innerHTML =  "Tu monster ataco con " + ataqueJugador + ", el monter enemigo ataco con " + ataquePC + "- PENDIENTE👌"
-
+    parrafo.innerHTML =  "Tu monster ataco con " + ataqueJugador + ", el monter enemigo ataco con " + ataquePC + " - " + resultado 
     seleccionarMensaje.appendChild(parrafo)
 }
 
@@ -76,7 +71,8 @@ function selec_m_j() {
     let seleccionj = (inputTotumix.checked) ? 
         spanMosterJudador.innerHTML = ("totumix") 
         : (inputAmiwis.checked) ? spanMosterJudador.innerHTML = ("amiwis")
-        : spanMosterJudador.innerHTML = ("gordobadoo")
+        : (inputGordobadoo.checked) ? spanMosterJudador.innerHTML = ("gordobadoo")
+        : alert ("selecciona un monster")  
     return seleccionj &&
         selecMascotaPc()
 
