@@ -34,6 +34,8 @@ function ataqueEnemigo() {
     } else {
         ataquePC = "TIERRA"
     }   
+     
+    
 
     crearMensaje()
 }
