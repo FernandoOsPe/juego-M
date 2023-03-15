@@ -35,22 +35,26 @@ function ataqueEnemigo() {
     } else {
         ataquePC = "TIERRA"
     }  
-    crearMensaje()
+
+    combate()
+    
 }
 
 function combate() {
-    if(pc == jugador){
+    if(ataqueJugador == ataquePC) {
         crearMensaje("EMPATE")
-    } else if(ataqueJugador == "AIRE" && ataqueEnemigo == "TIERRA") { 
+    } else if(ataqueJugador == "AIRE" && ataquePC == "TIERRA") { 
         crearMensaje("GANASTE")
-    } else if(ataqueJugador == "FUEGO" && ataqueEnemigo == "AIRE") {
+    } else if(ataqueJugador == "FUEGO" && ataquePC == "AIRE") {
         crearMensaje("GANASTE")
-    } else if(ataqueJugador == "TIERRA" && ataqueEnemigo == "FUEGO") {
+    } else if(ataqueJugador == "TIERRA" && ataquePC == "FUEGO") {
         crearMensaje("GANASTE")
     } else {
         crearMensaje("PERDISTE") 
     }
+    
 }
+
 
 function crearMensaje(resultado) {
     let seleccionarMensaje = document.getElementById("mensaje")
