@@ -41,11 +41,11 @@ function ataqueEnemigo() {
 function combate() {
     if(pc == jugador){
         crearMensaje("EMPATE")
-    } else if(ataqueJugador == "AIRE" && ataqueEnemigo == "TIERRA"){ 
+    } else if(ataqueJugador == "AIRE" && ataqueEnemigo == "TIERRA") { 
         crearMensaje("GANASTE")
-    } else if(ataqueJugador == "FUEGO" && ataqueEnemigo == "AIRE"){
+    } else if(ataqueJugador == "FUEGO" && ataqueEnemigo == "AIRE") {
         crearMensaje("GANASTE")
-    } else if(ataqueJugador == "TIERRA" && ataqueEnemigo == "FUEGO"){
+    } else if(ataqueJugador == "TIERRA" && ataqueEnemigo == "FUEGO") {
         crearMensaje("GANASTE")
     } else {
         crearMensaje("PERDISTE") 
