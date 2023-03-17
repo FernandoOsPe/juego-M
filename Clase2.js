@@ -169,6 +169,7 @@ function selecMonstertaPc() {
         : (mosnterAleatorio == 2) ? spanMonsterPc.innerHTML = "amiwis"
         : spanMonsterPc.innerHTML = "gordobadoo"
     return seleccionM
+    
     // if (mosnterAleatorio == 1) {
     //     spanMonsterPc.innerHTML = "Totumix🌪️"
     // } else if (mosnterAleatorio == 2) {
