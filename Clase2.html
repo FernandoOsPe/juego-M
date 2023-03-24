@@ -4,39 +4,50 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MOKEPON</title>
+        <title>MONSTERMON</title>
         <link rel="stylesheet" href="/Clase 2/Clase2.css"> 
     </head>
     <body>
-        <H1 class="titulo"> MONSTERMON!  🌪️ 🔥 🌱</H1>
-
         <section id="selec_moster">
+            <H1 class="titulo"> MONSTERMON!  🌪️ 🔥 🌱</H1>
 
-            <h2>Elige tu monster:</h2>
+            <h2 class="subtitulo">Elige tu monster:</h2>
 
-            <label for="totumix">totumix</label>
-            <input type="radio" name="monter" id="totumix">
-
-            <label for="amiwis">amiwis</label>
-            <input type="radio" name="monter" id="amiwis">
-
-            <label for="gordobadoo">gordobadoo</label>
-            <input type="radio" name="monter" id="gordobadoo">
-
+            <div class="tarjetas">
+                <label  class="tarjetasDelJuego" for="totumix">
+                    <p>TOTUMIX</p>
+                    <img src="/DISEÑO DE FLOG/img de practica/totumix.png" alt="totumix">  
+                </label>
+                <input type="radio" name="mosnter" id="totumix">
+    
+                <label class="tarjetasDelJuego" for="amiwis">
+                    <p>AMIWIS</p>
+                    <img src="/DISEÑO DE FLOG/img de practica/amiwiss.png" alt="amiwis">
+                </label>
+                <input type="radio" name="monter" id="amiwis">
+    
+                <label class="tarjetasDelJuego" for="gordobadoo">
+                    <p>GORDOBADOO</p>
+                    <img src="/DISEÑO DE FLOG/img de practica/Gordobadoo.png" alt="gordobadoo">
+                </label>
+                <input type="radio" name="monter" id="gordobadoo">
+            </div>
             <button id="boton_monster">SELECCIONAR</button>
         </section>
 
         <section id="selec_atk">
+            <H1 class="titulo"> MONSTERMON!  🌪️ 🔥 🌱</H1>
 
             <h2>Elige tu ataque:</h2>
-
-            <p>Tu monster <span id="monster_jugador"></span> tiene <span id="vidas_jugador"></span> vidas</p>
-            <p>el monster <span id="monster_pc"></span> enemigo tiene <span id="vidas_pc"></span> vidas</p>
             <p>
                 <button id="boton_aire"> AIRE 🌪️</button>
                 <button id="boton_fuego"> FUEGO 🔥</button>
                 <button id="boton_tierra"> TIERRA 🌱</button> 
             </p>
+
+            <p>Tu monster <span id="monster_jugador"></span> tiene <span id="vidas_jugador"></span> vidas</p>
+            <p>el monster <span id="monster_pc"></span> enemigo tiene <span id="vidas_pc"></span> vidas</p>
+            
         </section>
 
         <section id="mensaje"> </section>

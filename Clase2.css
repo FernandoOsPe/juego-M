@@ -1,6 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&family=Lobster&family=Quicksand:wght@500&family=Unbounded&display=swap');
+
+body {
+font-family: 'Unbounded', cursive;
+background-color:#393053 ;
+}
+
+#selec_moster {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .titulo {
-  color: rgb(52, 12, 233); 
-  width: 410px;
-  height: 50px;
-  background-color: crimson;
+  color: white;
+  font-size: 32px;
+}
+
+.subtitulo {
+  color: white;
+}
+
+.tarjetas {
+display: flex;
+} 
+
+.tarjetasDelJuego {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  background: #635985;
+  box-sizing: border-box;
+  border: #18122B 5px solid;
+  border-radius: 20px;
+  margin: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+}
+
+.tarjetasDelJuego img {
+  height: 125px;
+}
+
+input {
+  display: none;
+}
+
+#boton_monster {
+  width: 170px;
+  height: 45px;
+  border-radius: 20px;
+  border: #18122B 5px solid;
+  background: #635985;
+  margin-top: 60px;
 }
