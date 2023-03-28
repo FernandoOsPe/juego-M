@@ -14,49 +14,65 @@
             <h2 class="subtitulo">Elige tu monster:</h2>
 
             <div class="tarjetas">
+
+                <input type="radio" name="monster" id="totumix">
                 <label  class="tarjetasDelJuego" for="totumix">
                     <p>TOTUMIX</p>
                     <img src="/DISEÑO DE FLOG/img de practica/totumix.png" alt="totumix">  
                 </label>
-                <input type="radio" name="mosnter" id="totumix">
-    
+                
+                <input type="radio" name="monster" id="amiwis">
                 <label class="tarjetasDelJuego" for="amiwis">
                     <p>AMIWIS</p>
                     <img src="/DISEÑO DE FLOG/img de practica/amiwiss.png" alt="amiwis">
                 </label>
-                <input type="radio" name="monter" id="amiwis">
-    
+                
+                <input type="radio" name="monster" id="gordobadoo">
                 <label class="tarjetasDelJuego" for="gordobadoo">
                     <p>GORDOBADOO</p>
                     <img src="/DISEÑO DE FLOG/img de practica/Gordobadoo.png" alt="gordobadoo">
                 </label>
-                <input type="radio" name="monter" id="gordobadoo">
+                
             </div>
             <button id="boton_monster">SELECCIONAR</button>
+
         </section>
 
         <section id="selec_atk">
+
             <H1 class="titulo"> MONSTERMON!  🌪️ 🔥 🌱</H1>
 
-            <h2>Elige tu ataque:</h2>
-            <p>
-                <button id="boton_aire"> AIRE 🌪️</button>
-                <button id="boton_fuego"> FUEGO 🔥</button>
-                <button id="boton_tierra"> TIERRA 🌱</button> 
-            </p>
-
-            <p>Tu monster <span id="monster_jugador"></span> tiene <span id="vidas_jugador"></span> vidas</p>
-            <p>el monster <span id="monster_pc"></span> enemigo tiene <span id="vidas_pc"></span> vidas</p>
+            <h2 class="subtitulo">Elige tu ataque</h2>
             
-        </section>
+            <div class="tarjetas_botones">
+                <button id="boton_aire" class="botones_ataque"> AIRE 🌪️</button>
+                <button id="boton_fuego" class="botones_ataque"> FUEGO 🔥</button>
+                <button id="boton_tierra" class="botones_ataque">  TIERRA 🌱</button>
+            </div>
 
-        <section id="mensaje"> </section>
+            <div id="mensajes">
+                <p id="resultados"> Mucha Suerte!</p>
 
-        <section id="reset">
-            <button id="boton_reset">reiniciar</button>
-        </section>
+                <section id="reset">
+                    <button id="boton_reset">reiniciar</button>
+                </section>
+            </div>
 
-        
+            <div class="estilosp2">
+                <div class="estilos_jugador">
+                    <p id="vidas_jugador">3</p>
+                    <p id="monster_jugador"></p>
+                    <div id="ataques_del_jugador"></div>
+                </div>
+
+                <div class="estilos_pc">
+                    <p id="vidas_pc">3</p>
+                    <p id="monster_pc"></p>
+                    <div id="ataques_del_pc"></div>
+                </div>  
+            </div>
+
+        </section> 
     </body>
     <script src="/Clase 2/Clase2.js"></script>
 </html>

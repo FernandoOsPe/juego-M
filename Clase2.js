@@ -80,28 +80,38 @@ function combate() {
 
 function cantidadVidas() {
     if (vidasPC == 0) {
-        crearFinal("El Monster Enemigo Perdio Sus vidas, GANASTE!👌")
+        crearFinal("FELICIDADES, GANASTE!👌")
     } else if (vidasJugador == 0) {
-        crearFinal("Tu Monster Quedo sin Vidas, PERDISTE😒")
+        crearFinal("LO SIENTO, PERDISTE😒")
     }
 }
 
 
 
 function crearMensaje(resultado) {
-    let seleccionarMensaje = document.getElementById("mensaje")
-    let parrafo = document.createElement("p")
-        parrafo.innerHTML =  "Tu monster ataco con " + ataqueJugador + ", el monter enemigo ataco con " + ataquePC + " - " + resultado 
-        seleccionarMensaje.appendChild(parrafo)
+    let seleccionarMensaje = document.getElementById("resultados")
+    let ataquesDelPc = document.getElementById("ataques_del_pc")
+    let ataqueDelJugador = document.getElementById("ataques_del_jugador")
+
+   
+    let nuevoAtaqueDelPc = document.createElement("p")
+    let nuevoAtaqueDelJugador = document.createElement("p")
+    
+    seleccionarMensaje.innerHTML = resultado
+    nuevoAtaqueDelPc.innerHTML = ataquePC
+    nuevoAtaqueDelJugador.innerHTML = ataqueJugador
+
+    
+    ataquesDelPc.appendChild(nuevoAtaqueDelPc)
+    ataqueDelJugador.appendChild(nuevoAtaqueDelJugador)
 }
 
 
 function crearFinal(resultadoFinal) {
-    let seleccionarMensaje = document.getElementById("mensaje")
-    let parrafo = document.createElement("p")
-        parrafo.innerHTML =  resultadoFinal
-        seleccionarMensaje.appendChild(parrafo)
+    let seleccionarMensaje = document.getElementById("resultados")
 
+    seleccionarMensaje.innerHTML =  resultadoFinal
+        
     let botonAire = document.getElementById("boton_aire")
          botonAire.disabled = true
     let botonFuego = document.getElementById("boton_fuego")
@@ -120,7 +130,7 @@ function selec_m_j() {
         sectionOcultarMonster.style.display = "none"
 
     let sectionOcultarAtaques = document.getElementById("selec_atk")
-        sectionOcultarAtaques.style.display = "block"
+        sectionOcultarAtaques.style.display = "flex"
 
     let inputTotumix = document.getElementById("totumix")
     let inputAmiwis = document.getElementById("amiwis")
@@ -128,8 +138,8 @@ function selec_m_j() {
     let spanMosterJudador = document.getElementById("monster_jugador")
 
 
-    let seleccionj = (inputTotumix.checked) ? 
-        spanMosterJudador.innerHTML = ("totumix") 
+    let seleccionj = 
+         (inputTotumix.checked) ? spanMosterJudador.innerHTML = ("totumix") 
         : (inputAmiwis.checked) ? spanMosterJudador.innerHTML = ("amiwis")
         : (inputGordobadoo.checked) ? spanMosterJudador.innerHTML = ("gordobadoo")
         : alert ("selecciona un monster")  

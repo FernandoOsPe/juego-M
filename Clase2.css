@@ -21,7 +21,7 @@ background-color:#393053 ;
   color: white;
 }
 
-.tarjetas {
+.tarjetas, .tarjetas_botones {
 display: flex;
 } 
 
@@ -44,9 +44,13 @@ display: flex;
 }
 
 input {
-  display: none;
+display: none;
 }
 
+input:checked + label {
+ border-color: yellow;
+}
+ 
 #boton_monster {
   width: 170px;
   height: 45px;
@@ -55,3 +59,57 @@ input {
   background: #635985;
   margin-top: 60px;
 }
+
+#selec_atk {
+  flex-direction: column;
+  align-items: center;
+}
+
+.botones_ataque {
+  width: 170px;
+  height: 45px;
+  border-radius: 20px;
+  border: #18122B 5px solid;
+  background: #635985;
+  margin: 10px;
+  color: white;
+}
+
+#mensajes {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  padding: 20px;
+  border-radius: 20px;
+  border: #18122B 5px solid;
+  background: #635985;
+  margin-top: 20px;
+  color: white;
+  flex-direction: column;
+}
+
+#boton_reset {
+  color: white;
+  background: #18122B;
+  border-radius: 10px;
+}
+ 
+.estilosp2{
+  display: grid;
+  grid-template-columns: 150px 150px;
+  color: white;
+}
+
+.estilos_jugador, .estilos_pc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+@media (max-width: 360px) {
+  .tarjetas, .tarjetas_botones{
+    flex-direction: column;
+  }
+}
+
